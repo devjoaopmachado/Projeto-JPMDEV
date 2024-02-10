@@ -1,0 +1,149 @@
+:root {
+    --hoversmcolor: #F7A74F;
+    --gradtopcolor: #0A020D;
+    --gradmdlcolor: #311E26;
+    --gragmdl2color: #6F4139;
+    --gradbottcolor: #97521B;
+    --colortextpdr: #fcfcfc;
+    --paddingpdr: 1.6rem;
+    --fontszpdr: 1.6rem;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Goldman", sans-serif;
+    /*font-weigth - 400/700*/
+}
+
+body {
+    background: linear-gradient(#0A020D, #311E26, #6F4139, #97521B);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: var(--colortextpdr);
+}
+
+.maxWidth {
+    max-width: 74em;
+    margin: auto;
+    text-align: center;
+}
+
+a,
+p {
+    font-size: var(--fontszpdr);
+    letter-spacing: .1rem;
+}
+
+/*HEADER/NAV - MOBILE*/
+.header-container_logo {
+    text-align: center;
+    padding: calc(var(--paddingpdr) *2.5);
+    box-sizing: border-box;
+}
+
+.header-container_logo img {
+    display: inline-block;
+    width: 30rem;
+    max-width: 100%;
+
+}
+
+.header-container_nav ul {
+    text-align: center;
+}
+
+.header-container_nav ul a {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    color: var(--colortextpdr);
+}
+
+.header-container_nav ul a:hover {
+    background-color: var(--hoversmcolor);
+    color: var(--gradtopcolor);
+}
+
+/*heroBanner - Mobile*/
+.heroBanner {
+    padding: 0 0 calc(var(--paddingpdr)*3);
+    box-sizing: border-box;
+}
+
+/* resutado desejado
+
+
+.container-title_heroBanner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--paddingpdr)*5) var(--paddingpdr);
+    box-sizing: border-box;
+}
+
+.title_invisible {
+    display: none;
+}
+
+.container-title_heroBanner img {
+    width: 70rem;
+    max-width: 100%;
+    display: block;
+} */
+
+/*desensolvimento abaixo*/
+.caixinha span {
+    text-transform: uppercase;
+    color: var(--colortextpdr);
+    display: block;
+
+}
+
+.caixinha {
+    border: 1px solid yellow;
+    padding:7rem calc(var(--paddingpdr)/2) ;
+    box-sizing: border-box;
+}
+
+
+.h1teste {
+    border: 1px solid red;
+    font-size: clamp(min(2rem, 7vw), 7vw, max(2rem, 7vw));
+}
+
+.subh1teste {
+    border: 1px solid blue;
+    letter-spacing: .8rem;
+    font-size: 1vw 1vh;
+}
+
+
+
+
+
+
+
+
+
+
+.card-heroBanner h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    padding: calc(var(--paddingpdr) *2) 0 var(--paddingpdr);
+    box-sizing: border-box;
+    letter-spacing: .6rem;
+
+}
+
+.card-heroBanner:nth-of-type(1)>h2 {
+    padding-top: 0;
+}
+
+.card-heroBanner p {
+    text-align: left;
+    padding: 0 calc(var(--paddingpdr)*2.5);
+    box-sizing: border-box;
+    line-height: 1.5;
+}
