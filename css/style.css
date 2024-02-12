@@ -12,21 +12,19 @@
 html {
     font-size: 62.5%;
     font-family: "Goldman", sans-serif;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     /*font-weigth - 400/700*/
 }
 
 body {
     background: linear-gradient(#0A020D, #311E26, #6F4139, #97521B);
     background-repeat: no-repeat;
-    min-height: 100vh;
+
     color: var(--colortextpdr);
 }
 
-.maxWidth {
-    max-width: 74em;
-    margin: auto;
-    text-align: center;
-}
+
 
 a,
 p {
@@ -35,14 +33,33 @@ p {
 }
 
 /*HEADER/NAV - MOBILE*/
+
+.maxWidth {
+    max-width:64em; 
+}
+
+.container_header {
+    display: flex;
+    justify-content: center;
+}
+.topHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ justify-content: center;
+
+}
+
+
+
 .header-container_logo {
-    text-align: center;
+    margin: auto;
     padding: calc(var(--paddingpdr) *2.5);
     box-sizing: border-box;
 }
 
 .header-container_logo img {
-    display: inline-block;
+    display: block;
     width: 30rem;
     max-width: 100%;
 
@@ -50,6 +67,11 @@ p {
 
 .header-container_nav ul {
     text-align: center;
+    display: block;
+  
+
+    
+  
 }
 
 .header-container_nav ul a {
@@ -67,12 +89,7 @@ p {
 }
 
 /*heroBanner - Mobile*/
-.heroBanner {
-    padding: 0 0 calc(var(--paddingpdr)*3);
-    box-sizing: border-box;
-}
 
-/* resutado desejado
 
 
 .container-title_heroBanner {
@@ -90,11 +107,14 @@ p {
 .container-title_heroBanner img {
     width: 70rem;
     max-width: 100%;
-    display: block;
-} */
+    display: flex;
+    margin: auto;
+    padding: 0 var(--paddingpdr);
+    box-sizing: border-box;
+ 
+}
 
-/*desensolvimento abaixo*/
-.caixinha span {
+/* .caixinha span {
     text-transform: uppercase;
     color: var(--colortextpdr);
     display: block;
@@ -102,48 +122,140 @@ p {
 }
 
 .caixinha {
-    border: 1px solid yellow;
+
     padding:7rem calc(var(--paddingpdr)/2) ;
     box-sizing: border-box;
 }
 
-
-.h1teste {
-    border: 1px solid red;
-    font-size: clamp(min(2rem, 7vw), 7vw, max(2rem, 7vw));
+.h1teste { 
+    font-size: clamp(2rem, 7vw, 5rem)
 }
 
 .subh1teste {
-    border: 1px solid blue;
-    letter-spacing: .8rem;
-    font-size: 1vw 1vh;
+
+font-size: clamp(1rem, 3.5vw, 2.5rem);
+letter-spacing: .5rem;
+
+    
+  } */
+
+  .section-heroBannerbottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc( var(--paddingpdr)*2) ;
+    padding-bottom: calc( var(--paddingpdr)*2) ;
+    box-sizing: border-box;
+
+  }
+
+.card-heroBanner {   
+    background-color: rgba(0, 0, 0, 0.295);
+    max-width:  75%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--paddingpdr);
+    box-sizing: border-box;
+   
+
 }
-
-
-
-
-
-
-
-
-
 
 .card-heroBanner h2 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    padding: calc(var(--paddingpdr) *2) 0 var(--paddingpdr);
     box-sizing: border-box;
     letter-spacing: .6rem;
-
+    text-align: center;
+    padding: var(--paddingpdr);
+    box-sizing: border-box;
 }
 
-.card-heroBanner:nth-of-type(1)>h2 {
-    padding-top: 0;
-}
+
 
 .card-heroBanner p {
+    font-size: 1.2rem;
     text-align: left;
-    padding: 0 calc(var(--paddingpdr)*2.5);
     box-sizing: border-box;
     line-height: 1.5;
+    letter-spacing: .2rem;
+    padding: calc(var(--paddingpdr)*1.5) var(--paddingpdr);
+    box-sizing: border-box;
+}
+
+
+
+span[class^="icon-"] {
+    display: block;
+    color: var(--colortextpdr);
+    font-size: 4rem;
+    padding: var(--paddingpdr);
+    padding-bottom: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+span[class$="-right2"] {
+  
+   display: inline-block;
+   padding:0;
+   box-sizing: border-box;
+   font-size: 1rem;
+}
+
+.btn-article {
+    text-decoration: none;
+    color: var(--colortextpdr);  
+    font-size: 1rem;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: calc(var(--paddingpdr) *.5);
+    padding:0 calc(var(--paddingpdr) *.5) 0 0;
+
+
+}
+
+
+@media screen and (min-width:64em) { 
+
+    .container_header { 
+     background-color: rgba(0, 0, 0, 0.308);
+
+     width: 100%;
+    
+   
+    }
+.topHeader {
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+    .header-container_logo {
+    margin: 0;
+    padding: var(--paddingpdr);
+
+    }
+
+    .header-container_logo img {
+        display: block;
+        width: 15rem;
+        max-width: 100%;
+    
+    }
+
+    .header-container_nav {
+        display:flex;            
+    }
+
+    .header-container_nav ul {       
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       align-content: center;
+       gap: var(--paddingpdr);
+      padding: var(--paddingpdr);       
+        
+    }
+    
+
 }
