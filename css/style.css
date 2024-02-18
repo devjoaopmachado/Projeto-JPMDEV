@@ -7,7 +7,9 @@
     --colortextpdr: #fcfcfc;
     --paddingpdr: 1.6rem;
     --fontszpdr: 1.6rem;
+    --fontszsml: 1.3rem;
 }
+
 
 html {
     font-size: 62.5%;
@@ -17,18 +19,32 @@ html {
 }
 
 
+
 /*INDEX*/
 
-.background-headerHeroBanner {
-    background: linear-gradient(#0A020D, #311E26, #6F4139, #97521B);
+.background-header {
+    background: linear-gradient(#0A020D, #311E26);
     background-repeat: no-repeat;
     color: var(--colortextpdr);
-    min-height: 100vh;
+ 
+
+  
   }
+
+.background-HeroBanner {  
+
+background: linear-gradient( #311E26, #6F4139, #97521B);
+ background-repeat: no-repeat;
+    color: var(--colortextpdr);
+
+}
+
+
 
 .maxWidth {
     max-width: 144rem;
     margin: auto;
+ 
 }
 
 a,
@@ -106,6 +122,7 @@ letter-spacing: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: -1px;
     padding: calc(var(--paddingpdr)*5) var(--paddingpdr);
     box-sizing: border-box;
 }
@@ -128,12 +145,15 @@ letter-spacing: .5rem;
     flex-direction: column;
     align-items: center;
     gap: calc(var(--paddingpdr)*2);
-    padding-bottom: calc(var(--paddingpdr)*2);
+    padding-bottom: calc(var(--paddingpdr)*5);
     box-sizing: border-box;
 }
 
 .card-heroBanner {
-    background-color: rgba(0, 0, 0, 0.295);
+    background:linear-gradient(to top, rgba(0, 0, 0, 0),  rgba(0, 0, 0, 0.692)), url(/imagens/desert4288x2848.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
     max-width: 75%;
     display: flex;
     flex-direction: column;
@@ -191,9 +211,17 @@ span[class$="-right2"] {
 }
 
 /* TECNOLOGIAS MOBILE*/
+
+.background-tech {
+background: linear-gradient(45deg, rgba(141, 141, 141, 0.644), rgb(185, 185, 185, 0.644),rgb(236, 236, 236,0.644));
+
+
+}
+
+
 .container-tech {
 /* border: 1px solid red; */
-padding: var(--paddingpdr);
+padding: calc(var(--paddingpdr)*5) var(--paddingpdr) var(--paddingpdr);
 box-sizing: border-box;
 
 }
@@ -253,7 +281,7 @@ text-transform: uppercase;
     padding-top: 1rem;
     }
 .card-description p {
-    font-size: 1rem;
+    font-size: var(--fontszsml);
     letter-spacing: .2rem;
     line-height: 1.5;
     padding: 0 calc(var(--paddingpdr) /2);
@@ -271,7 +299,7 @@ text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
     color: #0A020D;
-    background-color: var(--colortextpdr);
+    background-color: var(--hoversmcolor);
 }
 
 .container-tech_ferramentas {    
@@ -283,26 +311,21 @@ text-transform: uppercase;
 .title-tech_bottom {
     font-size: 2rem;
 text-transform: uppercase;
+padding-bottom: var(--paddingpdr);
 
 }
 
-.container-ferramentas_Minbottom {
-    
-    display: flex;
-    gap: 1rem;
-    
-  
+.container-ferramentas_Minbottom {  
+    gap: var(--paddingpdr);   
 }
 
-.card-tech_bottom {
- 
+.card-tech_bottom { 
     padding: var(--paddingpdr);
     box-sizing: border-box;
-  
-    
+    outline: 2px solid #0a020d7a;  
+    border-radius: 5px;  
  
 }
-
 .card-tech_bottom h5 {
     font-size: 1.6rem ;
     text-align: center;
@@ -318,13 +341,31 @@ height: 3.3rem;
 }
 
 .card-tech_bottom p {
-    font-size: 1rem;
+    font-size: var(--fontszsml);
 line-height: 1.5;
 letter-spacing: .1rem;
 padding-top: calc(var(--paddingpdr)/2);
 box-sizing: border-box;
-
 }
+
+/*INICIO SISTEMA DE GRID'S*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex:1 0 auto ;  
+    width: 100%;
+}
+
+.col-6 {
+    width: calc(50% - var(--paddingpdr) ) ;
+}
+
+.col-12 {
+    width: calc(100% - var(--paddingpdr) ) ;
+} 
 
 
 
@@ -371,6 +412,9 @@ box-sizing: border-box;
         align-content: center;
         gap: var(--paddingpdr);
         padding: var(--paddingpdr);
+    }
+    main {
+        display: none;
     }
  
     /* TECNOLOGIAS MOBILE*/
